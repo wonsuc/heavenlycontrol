@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/listHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:id="@+id/itemNick"
+            style="@style/Label_ItemHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:paddingLeft="0dp"
+            android:paddingRight="15dp"
+            android:text="닉네임" />
+
+        <TextView
+            android:id="@+id/itemID"
+            style="@style/Label_ItemHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="start|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="아이디"
+            android:maxLines="3" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/member_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/listHeader"
+        android:theme="@style/ListView"
+        android:divider="@android:color/white"
+        android:dividerHeight="1px"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+</RelativeLayout>

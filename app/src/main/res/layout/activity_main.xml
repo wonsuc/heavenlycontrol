@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#10000000">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/listHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp">
+
+
+            <TextView
+                android:id="@+id/itemRank"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="순위" />
+
+            <TextView
+                android:id="@+id/itemNick"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="닉네임" />
+
+            <TextView
+                android:id="@+id/itemHeavenlyStar"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="인정별" />
+
+            <TextView
+                android:id="@+id/itemRealStar"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="순수별" />
+
+            <TextView
+                android:id="@+id/itemDupStar"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="중복별" />
+
+            <TextView
+                android:id="@+id/itemAdvantage"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="어드\n밴티지" />
+
+            <TextView
+                android:id="@+id/itemBase"
+                style="@style/Label_ItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="베이스" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/record_rank_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/listHeader"
+            android:layout_margin="10dp"
+            android:divider="@android:color/white"
+            android:dividerHeight="1px"
+            android:padding="10dp"
+            android:theme="@style/ListView" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="@dimen/btn_fab_size"
+        android:layout_height="@dimen/btn_fab_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/btn_fab_margins"
+        android:layout_marginRight="@dimen/btn_fab_margins"
+        android:background="@drawable/btn_fab_default"
+        android:elevation="@dimen/default_elevation"
+        android:src="@drawable/ic_new_white"
+        android:textSize="28sp" />
+
+</RelativeLayout>
